@@ -64,6 +64,13 @@ app.post('/fabricante', async (req,res)=>{
         res.status(500).json({message:'Não foi possível gravar os dados!'})
     }
 })
+app.delete('/fabricante/:id', (req,res)=>{
+    const valor = req.params
+    console.log(valor)
+    console.log('---------------------------')
+    console.log(valor.id)
+    res.status(200).json({message:'Dados recebidos!'})
+})
 
 app.get('/', (req,res)=>{
     console.log('Aplicação rodando!')
